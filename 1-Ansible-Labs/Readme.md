@@ -5,15 +5,20 @@
 
 3. In a new Directory copy this respository:
 ``` shell
-git clone https://github.com/bradmorg/ansible-labs.git
+git clone https://github.com/samnzay/Ansible-for-DevOps-Engineers.git
 ```
 
-4. Start the vagrant instance.
+4. Change directory to "Ansible-for-DevOps-Engineers/1-Ansible-Labs" folder
+```shell
+cd Ansible-for-DevOps-Engineers/1-Ansible-Labs
+```
+
+5. Start the vagrant instance.
 ``` shell
 vagrant up
 ```
 
-5. SSH into the ansible-control virtual machine.
+6. SSH into the ansible-control virtual machine.
 ``` shell
 vagrant ssh ansible-control
 ```

@@ -1,7 +1,7 @@
 
 <p align="center">
 
-<img width="200" height="200" src="/1-Ansible-Labs/architecture/1-Ansible-lab.png" alt="1-Ansible-labs">
+<img width="100%" height="500" src="/1-Ansible-Labs/architecture/1-Ansible-lab.png" alt="1-Ansible-labs">
 
 </p>
 ## How to use these Labs

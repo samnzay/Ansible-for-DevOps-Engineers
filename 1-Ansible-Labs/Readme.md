@@ -1,3 +1,9 @@
+
+<p align="center">
+
+<img width="200" height="200" src="/1-Ansible-Labs/architecture/1-Ansible-lab.png" alt="1-Ansible-labs">
+
+</p>
 ## How to use these Labs
 1. Install Oracle Virtual Box:  https://www.virtualbox.org/
 

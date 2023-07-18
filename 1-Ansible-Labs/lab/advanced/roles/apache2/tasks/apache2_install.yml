@@ -1,0 +1,28 @@
+- name: Ensure Apache is the latest version
+  apt:
+    name: apache2
+    state: latest
+  #task level tags
+  tags: installation
+    
+- name: Write the apache2 ports.conf config file
+  template: 
+    src: templates/ports.conf.j2
+    dest: /etc/apache2/ports.conf
+  notify:
+    - restart 
+  tags: configuration
+    
+- name: Write the apache2 index.html file
+  template: 
+    src: templates/index.html.j2
+    dest: /var/www/html/index.html
+  notify:
+    - restart apache
+  tags: configuration
+
+- name: Ensure Apache is running
+  service:
+    name: apache2
+    state: started
+  tags: always # no matter what task, this tag will always be run.

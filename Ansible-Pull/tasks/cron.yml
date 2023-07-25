@@ -1,0 +1,7 @@
+- name: install cron job (Ansible-pull)
+  cron:
+    user: ansible
+    name: "ansible provision"
+    minute: "*/10"
+    job: "/usr/bin/ansible-pull -o -U "https://github.com/samnzay/Ansible-Pull.git > /dev/null"
+    # -o means: Ansible will check every 10min, but only run when there is the actual changes in the repository

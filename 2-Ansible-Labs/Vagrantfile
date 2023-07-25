@@ -1,0 +1,55 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+Vagrant.configure("2") do |config|
+  servers=[
+    {
+      :hostname => "ansible-control",
+      :box => "bento/ubuntu-18.04",
+      :ip => "192.168.57.100",
+      :ssh_port => '2215'
+    },
+    {
+      :hostname => "server-1",
+      :box => "bento/ubuntu-18.04",
+      :ip => "192.168.57.101",
+      :ssh_port => '2210'
+    },
+    {
+      :hostname => "server-2",
+      :box => "bento/ubuntu-18.04",
+      :ip => "192.168.57.102",
+      :ssh_port => '2211'
+    },
+    {
+      :hostname => "server-3",
+      :box => "bento/ubuntu-18.04",
+      :ip => "192.168.57.103",
+      :ssh_port => '2212'
+    }
+
+  ]
+
+  servers.each do |machine|
+
+    config.vm.define machine[:hostname] do |node|
+      node.vm.box = machine[:box]
+      node.vm.hostname = machine[:hostname]
+    
+      node.vm.network :private_network, ip: machine[:ip]
+      node.vm.network "forwarded_port", guest: 22, host: machine[:ssh_port], id: "ssh"
+      # When this synced folder remain too open, Ansible.cfg configuration file will be ignored. 
+      node.vm.synced_folder ".", "/vagrant", 
+        owner: "vagrant",
+        group: "vagrant",
+        mount_options: ["dmode=750,fmode=640"]
+
+      node.vm.provider :virtualbox do |v|
+        v.customize ["modifyvm", :id, "--memory", 512]
+        v.customize ["modifyvm", :id, "--name", machine[:hostname]]
+        #Goup vm
+        v.customize ["modifyvm", :id, "--groups", "/Ansible-labs-LearnLinuxTV"]
+      end
+    end
+  end
+
+end

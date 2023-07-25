@@ -26,7 +26,7 @@ Put All the IP address in there. In this example, iventory will looke like this:
 ```
 ### Attention Windows Users!
 
->**warning**: If you are using Windows and running virtual environment with Vagrant Virtuabox, `Make sure you ssh into ansible-control Linux VM` with `vagrant ssh` command, or use MobaXterm. otherwise you will not be able to use ansible on windows.
+> :warning: **Warning**If you are using Windows and running virtual environment with Vagrant Virtuabox, `Make sure you ssh into ansible-control Linux VM` with `vagrant ssh` command, or use MobaXterm. otherwise you will not be able to use ansible on windows.
 
 In your parent directory where Vagrantfile resides, run:
 ```shell

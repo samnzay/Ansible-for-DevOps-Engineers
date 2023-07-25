@@ -20,14 +20,13 @@ touch inventory
 
 Put All the IP address in there. In this example, iventory will looke like this:
 ```
-192.168.57.100 ansible-control
-192.168.57.101 server-1
-192.168.57.102 server-2
-192.168.57.103 server-3
+192.168.57.101
+192.168.57.102
+192.168.57.103
 ```
 ### Attention Windows Users!
 
->**Warning**: If you are using Windows and running virtual environment with Vagrant Virtuabox, `Make sure you ssh into ansible-control Linux VM` with `vagrant ssh` command, or use MobaXterm. otherwise you will not be able to use ansible on windows.
+>**warning**: If you are using Windows and running virtual environment with Vagrant Virtuabox, `Make sure you ssh into ansible-control Linux VM` with `vagrant ssh` command, or use MobaXterm. otherwise you will not be able to use ansible on windows.
 
 In your parent directory where Vagrantfile resides, run:
 ```shell

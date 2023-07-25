@@ -8,3 +8,4 @@ From basics to advanced concepts of ansible for DevOps tasks Automation.
 #### Check the labs listed below:
 
 [Ansible Basics to Advanced Labs (1)](/1-Ansible-Labs/)
+[Ansible Basics to Advanced Labs (2)](/2-Ansible-Labs/)

@@ -1,0 +1,15 @@
+---
+- hosts: localhost # run this playbook against localhost
+  connection: local # set connection to local, so it does not default ssh.
+  become: true
+
+  pre_tasks:
+    - name: update repositories
+      apt:
+        update_cache: yes
+      changed_when: F alse
+  
+  tasks:
+    - include: tasks/users.yml
+    - include: tasks/cron.yml
+    - include: tasks/packages.yml

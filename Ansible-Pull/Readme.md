@@ -1,7 +1,7 @@
 ## ANSIBLE PULL
 <p align="center">
 
-<img width="100%" height="auto" src="/Ansible-Pull/Architecture/Ansible-Pull.png" alt="Ansible-Automation">
+<img width="100%" height="auto" src="/Ansible-Pull/Architecture/Ansible-Pull.png" alt="Ansible-Automation">  
 Using Ansible "Pull" Mode to Dynamically Automate Server/Workstation Builds.
 ### What is that?
 
